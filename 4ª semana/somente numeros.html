@@ -1,0 +1,19 @@
+﻿<script language='JavaScript'>
+function SomenteNumero(e){
+    var tecla=(window.event)?event.keyCode:e.which;   
+    if((tecla>47 && tecla<58)) return true;
+    else{
+    	if (tecla==8 || tecla==0) return true;     // 8 backspace e 0 null
+	else  return false;
+    }
+}
+</script>
+ 
+<html>
+<head>
+<title> Somente Números </title>
+</head>
+<body>
+<input type='text' size='10' value='' onkeypress='return SomenteNumero(event)'>
+</body>
+</html>

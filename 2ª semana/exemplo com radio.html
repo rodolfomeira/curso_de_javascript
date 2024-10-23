@@ -1,0 +1,20 @@
+<select name="t2" id="t2">
+             <option value="2">Dois</option>
+             <option value="6">Seis</option>
+             <option value="8">Oito</option>
+             <option value="10">Dez</option>
+</select>
+
+Podemos utilizar o script da seguinte forma:
+
+<script language="Javascript"> function operacao(){
+
+var a=eval(document.formcalc.t1.value);
+var b=eval(document.formcalc.t2.value);
+
+document.write("Valor do Radio:" + a + "<br>");
+document.write("Valor do Combo:" + b + "<br>");
+document.write("A soma:" + (a+b)+ "<br>");
+
+}
+</script>

@@ -1,0 +1,32 @@
+<html>
+<head>
+<title> Aula de JavaScript - DATE </title>
+<script type="text/javascript">
+    Hoje = new Date();
+
+    Dia  = Hoje.getDate();
+    Mes  = Hoje.getMonth()+1;           // 0 - janeiro, 1 - fevereiro (+1 para juste)
+    Ano  = Hoje.getFullYear();
+	/*
+	mes[0] = Janeiro
+	mes[1] = Fevereiro 
+	mes[2] = Março
+	.
+	.
+	.
+	mes[10]= Nozembro
+	mes[11]= Dezembro
+	
+	
+	
+	*/
+	document.write("Hoje: " + Hoje);	
+	document.write("<br>Dia: " + Dia);
+	document.writeln("<br>Mês: " + Mes); 
+	document.writeln("<br>Ano: " + Ano); 
+</script>
+</head>
+<body>
+</body>
+</html>
+

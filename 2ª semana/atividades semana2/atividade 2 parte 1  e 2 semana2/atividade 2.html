@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8"/>
+<title> Disciplinas do 1º semestre de 2017 </title>
+<script language="javascript" type="text/javascript">
+	var num = Math.round(Math.random() * (6 - 1)) + 1;
+	var imagem=new Array();
+	imagem[1]="home/GSO I.jpg";
+	imagem[2]="home/imc.jpg";
+	imagem[3]="home/LP I.jpg";
+	imagem[4]="home/pwI.png";
+	imagem[5]="home/tlbd I.jpg";
+	imagem[6]="home/TPI web2.jpg";
+	var frase=new Array();
+	frase[1]="Gestão de Sistemas Operacionais";
+	frase[2]="Instalação e Manutencão de Computadores";
+	frase[3]="Lógica de Programação";
+	frase[4]="Programação Web I";
+	frase[5]="Técnicas de Linguagens de Banco de Dados I";
+	frase[6]="Técnicas de Programação Para Internet I";
+	var verfrase=frase[num];
+	
+	
+	
+	
+	
+	var visualizar = imagem[num];
+	document.write("<center><b>Tecle F5 Para Mudar  Disciplina </b></center><br><br>");
+	document.write("<center> <h2>"+verfrase+"<br><br></h2></center>");
+	document.write("<center><img src='"+visualizar+"'></center>");
+</script>
+
+
+
+</head>
+<body>
+	<img id="banner" src="">
+</body>
+</html>

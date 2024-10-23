@@ -1,0 +1,22 @@
+<html>
+<head>
+<title> Aula de JavaScript - Navigator </title>
+<script type="text/javascript">
+
+function setCookie(name,value,exdays) {
+	var expires;
+	var date; 
+	var value;
+	date = new Date(); //  criando o COOKIE com a data atual
+	date.setTime(date.getTime()+(exdays*24*60*60*1000));
+	expires = date.toUTCString();
+	document.cookie = name+"="+value+"; expires="+expires+"; path=/";
+}
+
+setCookie('Teste','Aula de Javascript', 2);
+
+</script>
+</head>
+<body>
+</body>
+</html>

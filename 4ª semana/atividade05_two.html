@@ -1,0 +1,107 @@
+﻿<html>
+<title> Trabalhando com Formulários </title>
+<script language="javascript">
+	function confirma(){
+		<!-- testando caixa de texto -->
+		if(document.meuform.nome.value == "")
+			{	alert("Nome Obrigatório");
+				document.meuform.nome.focus();
+				return false; }
+		<!-- testando caixa de texto -->
+		if(document.meuform.endereco.value == "")
+			{	alert("Endereço Obrigatório");
+				document.meuform.endereco.focus();
+				return false; }
+		<!-- testando caixa de texto -->
+		 if(document.meuform.cidade.value == "")
+			{	alert("Cidade Obrigatória");
+				document.meuform.cidade.focus();
+				return false; }
+				<!-- testando opção select  estado-->				
+		if(document.meuform.estado.selectedIndex==0)
+			{ 	alert("Selecione um Estado");				
+				return false; }
+		<!-- testando opção de radio -->
+		if(document.meuform.cargo[0].checked==false &&
+	   		document.meuform.cargo[1].checked==false  &&  
+			document.meuform.cargo[2].checked==false  && 
+            document.meuform.cargo[3].checked==false  &&  			
+			document.meuform.cargo[4].checked==false 
+			
+			
+			) 
+		
+			{   alert("Cargo Obrigatório");
+				return false; }
+		<!-- testando opção de checkbox -->
+		if(document.meuform.formacao[0].checked==false &&
+		    document.meuform.formacao[1].checked==false &&
+	   		document.meuform.formacao[2].checked==false &&
+			document.meuform.formacao[3].checked==false &&
+			document.meuform.formacao[4].checked==false  
+			 
+
+
+
+
+			)
+			{   alert("Área de Interesse Obrigatória");
+				return false; }
+		<!-- testando opção select -->				
+		 
+		<!-- testando opção textarea -->						
+		if(document.meuform.curriculo.value=="")
+			{	alert("Prenchimento de Mini-Curriculo Obrigatório");
+				return false; }		
+		
+	}
+</script>
+<body>
+<h2> Formulário para cadastro </h2>
+<form name="meuform" method="get" onSubmit="return confirma()">
+<fieldset><legend>Dados Pessoais</legend>
+Nome: 
+<input type="text" name="nome"> <br>
+Endereço: 
+
+<input type="text" name="endereco"> <br>
+Cidade: 
+<input type="text" name="cidade"> <br>
+<br>Estado:<br> 
+<select name="estado">
+	<option> --Escolha o Estado ---
+	<option> Amazonas
+	<option> São Paulo
+	<option> Rio e Janeiro
+</select><br>
+</fieldset>
+<fieldset><legend>Profissionais</legend>
+<br>Natureza dio Cargo :<br> 
+<input type="radio" name="cargo" value="rd_op1"> Gerência<br>
+<input type="radio" name="cargo" value="rd_op2"> Finaceiro<br>
+<input type="radio" name="cargo" value="rd_op3"> Recepção<br>
+<input type="radio" name="cargo" value="rd_op4"> Administrativo<br>
+<input type="radio" name="cargo" value="rd_op5"> Jurídico<br>
+ 
+<br>Área de Interesse<br> 
+<input type="checkbox" name="formacao" value="ck_op1"> Computação<br>
+<input type="checkbox" name="formacao" value="ck_op2"> Biologiao<br>
+<input type="checkbox" name="formacao" value="ck_op3"> Meio Ambiente<br>
+<input type="checkbox" name="formacao" value="ck_op4"> Biologiao<br>
+<input type="checkbox" name="formacao" value="ck_op5"> História<br>
+ 
+ 
+<br>Mini - Curriculo: 
+<textarea name="curriculo" rows=6 cols=40></textarea><br>
+</fieldset>
+<input type="reset" value="Limpar">
+<input type="submit" value="Enviar">
+</form>
+</body>
+</html>
+
+
+
+
+
+

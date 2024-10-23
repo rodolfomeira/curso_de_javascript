@@ -1,0 +1,27 @@
+<html>
+<title> Trabalhando com Formulários </title>
+<script language="javascript">
+	function confirma(){
+		if(document.meuform.assinatura.value=="")
+			{
+			alert("Texto Obrigatório")
+			return false
+			}
+		else {
+			return true 
+		}
+	}
+</script>
+<body>
+<h2> Formulário para cadastro </h2>
+<form name="meuform" onSubmit="return confirma()">
+	Mensagem:<br>
+	<textarea name="assinatura" rows=6 cols=40></textarea>
+	<br>
+	<input type="submit" value="enviar">
+</form>
+</body>
+</html>
+
+
+

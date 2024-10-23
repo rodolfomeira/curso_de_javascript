@@ -1,0 +1,23 @@
+<html>
+<title> Trabalhando com Formulários </title>
+<script language="javascript">
+	function confirma(){
+		var email = document.meuform.email.value;
+		if (email.indexOf('@') == -1 ||
+			email.indexOf('.') == -1 )
+			alert("E-mail Inválido !!");
+	}
+</script>
+<body>
+<h2> Formulário para cadastro </h2>
+<form name="meuform" onSubmit="return confirma()">
+	E-mail:<br> 
+	<input type="text" name="email"><br>
+	<input type="submit" value="enviar">
+</form>
+</body>
+</html>
+
+
+
+

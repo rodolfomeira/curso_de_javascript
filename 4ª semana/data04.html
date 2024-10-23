@@ -1,0 +1,24 @@
+<html>
+<head>
+<title> Aula de JavaScript - DATE </title>
+<script type="text/javascript">
+    Hoje = new Date();
+	Dia1  = Hoje.getDate();
+	Hoje.setDate(45);
+	
+    Dia  = Hoje.getDate();
+    Mes  = Hoje.getMonth()+1;           // 0 - janeiro, 1 - fevereiro (+1 para juste)
+    Ano  = Hoje.getFullYear();
+	
+	
+	document.write("Próximo Pagamento (45 dias)");
+	document.write("<br>Hoje é : " + Dia1);
+	document.write("<br>Dia: " + Dia);
+	document.writeln("<br>Mês: " + Mes); 
+	document.writeln("<br>Ano: " + Ano); 
+</script>
+
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<html>
+<title> Trabalhando com Formulários </title>
+<script language="javascript">
+	function confirma(){
+		<!-- testando caixa de texto -->
+		if(document.meuform.nome.value == "")
+			{	alert("Nome Obrigatório");
+				document.meuform.nome.focus();
+				return false; }
+		<!-- testando opção de radio -->
+		if(document.meuform.trabalha[0].checked==false &&
+	   		document.meuform.trabalha[1].checked==false )
+			{   alert("Opção Obrigatória");
+				return false; }
+		<!-- testando opção de checkbox -->
+		if(document.meuform.formacao[0].checked==false &&
+	   		document.meuform.formacao[1].checked==false )
+			{   alert("Opção Obrigatória");
+				return false; }
+		<!-- testando opção select -->				
+		if(document.meuform.cidade.selectedIndex==0)
+			{ 	alert("Indique uma unidade");				
+				return false; }
+		<!-- testando opção textarea -->						
+		if(document.meuform.assinatura.value=="")
+			{	alert("Texto Obrigatório");
+				return false; }		
+		<!-- verificando e-mail -->				
+		var email = document.meuform.email.value;
+		if (email.indexOf('@') == -1 ||
+			email.indexOf('.') == -1 )
+			{	alert("E-mail Inválido !!");
+				return false;}
+		<!-- Retorna verdadeiro caso todos os testes sejam satisfatórios -->								
+		return	true;
+	}
+</script>
+<body>
+<h2> Formulário para cadastro </h2>
+<form name="meuform" onSubmit="return confirma()">
+Digite seu nome: 
+<input type="text" name="nome"> <br>
+<br>Escola a opção:<br> 
+<input type="radio" name="trabalha" value="rd_op1"> Sim, Trabalho<br>
+<input type="radio" name="trabalha" value="rd_op2"> Não, trabalho<br>
+<br>Opção para pagamento de salário:<br> 
+<input type="checkbox" name="formacao" value="ck_op1"> Recebimento, via banco<br>
+<input type="checkbox" name="formacao" value="ck_op2"> Demostrativo personalizado<br>
+<br>Unidade de Trabalho:<br> 
+<select name="cidade">
+	<option> - - - cidade - - -
+	<option> Campinas
+	<option> São Paulo
+	<option> Rio e Janeiro
+</select><br>
+<br>Assintura eletrônica:<br> 
+<textarea name="assinatura" rows=6 cols=40></textarea><br>
+<br>E-mail:<br> 
+<input type="text" name="email"><br><br>
+<input type="reset" value="Limpar">
+<input type="submit" value="Enviar">
+</form>
+</body>
+</html>
+
+
+
+
+
+

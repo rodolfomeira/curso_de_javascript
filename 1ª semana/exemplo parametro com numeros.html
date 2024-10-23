@@ -1,0 +1,25 @@
+[code]
+<script>
+function exemplo5(link) {
+document.getElementById('pagina').innerHTML=document.getElementById(link).innerHTML;
+}
+function carrega() {
+document.getElementById('pagina').innerHTML=document.getElementById('home').innerHTML;
+}
+</script>
+<body onload="carrega();">
+<a href="javascript:exemplo5('home');"> Home</a> -
+<a href="javascript:exemplo5('link1');"> Link1</a> -
+<a href="javascript:exemplo5('link2');"> Link2</a> -
+<a href="javascript:exemplo5('link3');"> Link3</a> -
+<a href="javascript:exemplo5('link4');"> Link4</a>
+<p>
+<div id="pagina"></div>
+<div id="home" style="display:none;">Corpo da Página</div>
+<div id="link1" style="display:none;">Conteúdo do Link 1</div>
+<div id="link2" style="display:none;">Conteúdo do Link 2</div>
+<div id="link3" style="display:none;">Conteúdo do Link 3</div>
+<div id="link4" style="display:none;">Conteúdo do Link 4</div>
+</p>
+<body>
+[/code]

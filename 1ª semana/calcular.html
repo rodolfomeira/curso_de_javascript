@@ -1,0 +1,33 @@
+<html>
+       <head><title>Funções de Usuário em JavaScript</title></head> 
+            <script language="Javascript">
+
+                function  calcular()
+                  { 
+                      var i;
+
+                      
+                      var num=window.prompt("Digite o número:");	
+					      num=eval(num);
+                     
+					  document.write("<center><h2>*** Tabuada do "+num+ " ***</h2></center>");
+                      for (i=0;i<11;i++)
+                      {  
+                          tab=i*num; 
+						  document.write("<center><h3>"+tab+"</h3></center>");
+                       
+                        }
+ 
+                   }
+
+             </script>
+
+  <body>
+
+     <center>
+                    <input type="button" name="bt1" value="Clique para executar tabuada" onclick="calcular()">          
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+                     <input type="button" name="bt2" value="Fechar" onclick="window.close()"> 
+     </center>
+   </body> 
+</html>

@@ -1,0 +1,22 @@
+<html>
+<head>
+<title> Aula de JavaScript - Navigator </title>
+<script type="text/javascript">
+function getCookie(nome){
+var c_name = document.cookie; 
+	if(c_name!=undefined && c_name.length > 0) {
+		var posCookie = c_name.indexOf(nome); 
+		if (posCookie >= 0) {
+			var o_cookie = document.cookie; 
+			var o_cookie_array = o_cookie.split(nome+"="); 
+			var a_data = unescape(o_cookie_array[1]);
+			alert(a_data);
+		}
+	}
+}
+getCookie("Teste");
+</script>
+</head>
+<body>
+</body>
+</html>

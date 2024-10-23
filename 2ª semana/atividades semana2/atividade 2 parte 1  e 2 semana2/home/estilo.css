@@ -1,0 +1,27 @@
+.container{
+    width: 95%;
+    margin: auto;
+}
+
+.pure-g a figure{
+    position: relative;
+    background: #000000;
+}
+.pure-g a figure img{
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+    transition: all 0.5s;
+}
+
+.pure-g a:hover figure img{
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    transition: all 0.5s;
+}
+
+.pure-g figcaption {
+    color: #ffffff;
+    margin: 0 10px;
+    position: absolute;
+    bottom: 20px;
+}

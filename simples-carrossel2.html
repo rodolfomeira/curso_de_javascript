@@ -1,0 +1,70 @@
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+<!-- BANNERS IMAGENS, ENFIM O QUE QUISER -->
+<div id='central'>
+     <ul class="left">
+	  <li>Banner1</li>
+	  <li>Banner2</li>
+	  <li>Banner3</li>
+	  <li>Banner4</li>
+	  <li>Banner5</li>
+	  <li>Banner6</li>
+	  <li>Banner7</li>
+	  <li>Banner8</li>
+	  <li>Banner9</li>
+	  <li>Bannera</li>
+	  <li>Bannerb</li>
+	  <li>Bannerc</li>
+	  <li>Bannerd</li>
+	  <li>Bannere</li>
+	  <li>Bannerf</li>
+     </ul>
+</div>
+<!-- NAVEGAÇÃO -->
+     <input type="button" value="direita" id="direita"/>
+     <input type="button" value="esquerda" id="esquerda"/>
+<style type="text/css">
+     *{
+     	padding:0;
+	margin:0;
+     }
+     ul{
+          list-style:none;
+     }
+     .left{
+          width:5000px;
+          float:left;
+          display:block;
+     }
+     .left li{
+          height:50px;
+          border:1px solid black;
+	  float:left;
+	  margin-right:5px;
+     }
+     #central{
+          display:block;
+          width:305px;
+          height:80px;
+	  overflow:hidden;
+     }
+</style>
+<script type="text/javascript">
+     $(document).ready(function(){
+        $('#direita').click(function(){
+		if($('.left').css('margin-left') != '-608px'){
+			$('.left').animate({"margin-left": "-=304px"}, "slow");
+		}else{
+			$('.left').animate({"margin-left": "+=608px"}, "slow");		
+		}
+	});  
+        $('#esquerda').click(function(){
+		if($('.left').css('margin-left') != '0px'){
+			$('.left').animate({"margin-left": "+=304px"}, "slow");
+		}else{
+			$('.left').animate({"margin-left": "-=608px"}, "slow");		
+		}
+	});  
+     });
+</script>
+
+

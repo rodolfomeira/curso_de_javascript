@@ -1,0 +1,41 @@
+<html>
+<head>
+<title> Aula de JavaScript </title>
+<script type="text/javascript" src="core.js"></script>
+<style type="text/css">
+#ryu { 
+	height: 120px; 
+	width: 100px; 
+	background-image: url(ryu.png);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+</style>
+<script type="text/javascript">
+var ryu = {
+	init: function()
+	{
+		ryu.div = document.getElementById("ryu");
+		ryu.frameWidth = 100;
+		ryu.frames = 13;
+		ryu.offsetX = 0;
+
+		ryu.animar();
+	},	
+	animar: function(){
+		ryu.offsetX -= ryu.frameWidth;
+		
+		if (ryu.offsetX <= -ryu.frameWidth * ryu.frames){
+			ryu.offsetX = 0;
+		}
+	ryu.div.style.backgroundPosition =  ryu.offsetX + " 0px";
+	setTimeout(ryu.animar, 175);
+	}
+};
+Core.start(ryu);
+</script>
+</head>
+<body>
+<div id="ryu"></div>
+</body>
+</html>

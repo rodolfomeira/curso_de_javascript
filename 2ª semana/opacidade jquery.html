@@ -1,0 +1,30 @@
+<html>
+<head>
+<style type="text/css">
+  img { opacity: 0; display:block;}
+</style>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+  $("a.efeito").mouseover(function(){
+    $(this).prev().fadeTo("slow", 4);
+  }).mouseout(function(){
+    $(this).prev().fadeTo("slow", 0);
+  });
+ 
+  // outra forma
+  $("a.efeito").hover(function() {
+    $(this).prev().animate({"opacity": "1"}, "slow");
+  },function() {
+    $(this).prev().animate({"opacity": "0"}, "slow");
+  });
+});	
+</script>	
+</head>
+<body>
+<div>
+    <img class="" src="http://www.linhadecomando.com/wp-content/uploads/Logo__2.png" />
+    <a href="#" class="efeito">Clique aqui para aplicar efeito</a>
+</div>
+</body>
+</html>

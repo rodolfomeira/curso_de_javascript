@@ -1,0 +1,22 @@
+﻿<html>
+<head><title>Validando campo: Telefone</title>
+<script language="JavaScript" type="text/javascript">
+function validarCampo(){
+	var reDigits = /^[0-6][0-9]{6}[0-9]\b/;
+	if (!reDigits.test(document.getElementById("texto1").value)){
+		alert("O número: "+document.getElementById("texto1").value+" é inválido!");
+		document.getElementById("texto1").select();
+		return false;
+	}else{return true;}
+}
+</script>
+</head>
+<body>
+
+Número válido: 8 números que não iniciam com 7, 8 ou 9.
+<form name="form1" action="" method="post" onSubmit="return validarCampo();">
+<input type="text" name="texto1" id="texto1"> <input type="submit" value="Verificar">
+</form>
+
+</body>
+</html>

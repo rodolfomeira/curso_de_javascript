@@ -1,0 +1,50 @@
+<html>
+<head><title>Cálculos entre objeto de Texto</title> </head>
+
+<script language="Javascript"> function operacao(){
+
+var a=eval(document.formcalc.t1.value); 
+
+	 document.write(a+"</h3");
+     document.write('<br> <br> <br> <a href=""/>Executar novamente</a> ' );
+
+
+
+
+
+
+
+
+
+}
+</script> 
+
+
+
+<body>
+
+<form name="formcalc"> 
+
+<h3><center>Passagem de Valores pelo emJavaScript</h3>
+
+<select name="t1" id="t1">
+ 
+  <option value="2">Dois</option>
+ 
+  <option value="6">Seis</option>
+ 
+  <option value="8">Oito</option>
+ 
+  <option value="10">Dez</option>
+
+</select>
+<hr><br><br>
+
+<input type="button" name="bt1" value="Passar Valor" onclick="operacao()"> &nbsp&nbsp
+<input type="reset" name="bt2" value="Cancelar" onclick="document.formcalc.t1.focus()">
+&nbsp&nbsp
+
+<input type="button" name="bt3" value="Fechar" onclick="window.close()"></center> 
+</form>
+</body>
+</html>

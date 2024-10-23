@@ -1,0 +1,62 @@
+﻿<html>
+<title> Trabalhando com Formulários </title>
+<script language="javascript">
+	function confirma(){
+		<!-- testando caixa de texto -->
+		if(document.meuform.email.value == "")
+			{	alert("E-mail é  Obrigatório");
+				document.meuform.email.focus();
+				return false; }
+				
+		<!-- testando caixa de texto -->
+		if(document.meuform.senha.value == "")
+			{	alert("Senha Obrigatório");
+				document.meuform.senha.focus();
+				return false; }		
+				
+		
+		<!-- verificando e-mail -->				
+		var email = document.meuform.email.value;
+		if (email.indexOf('@') == -1 ||
+			email.indexOf('.') == -1 )
+			{	alert("E-mail Inválido !!");
+				return false;}
+		<!-- Retorna verdadeiro caso todos os testes sejam satisfatórios -->								
+		return	true;
+	}
+</script>
+<body>
+
+
+ <p align="center"> <h1> Autenticação de Sistema </h1></p>
+<form name="meuform" onSubmit="return confirma()">
+<fieldset><legend>Login de Sistema</legend>
+<label>E-mail</label><br>
+<input name="email" type="text" maxlength="60"><br>
+<label>Senha</label><br>
+<input name="senha" type="password" maxlength="60"><br>
+ 
+ 
+<input type="reset" value="Limpar">
+<input type="submit" value="Enviar">
+
+</fieldset>
+
+
+</form>
+ 
+ 
+ 
+ 
+ 
+ 
+
+</form>
+</body>
+</html>
+
+
+
+
+
+

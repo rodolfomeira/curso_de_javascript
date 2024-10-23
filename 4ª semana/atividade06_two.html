@@ -1,0 +1,102 @@
+﻿<html>
+<title> Trabalhando com Formulários </title>
+<script language="javascript">
+	function confirma(){
+		<!-- testando caixa de texto nome -->
+		if(document.meuform.nome.value == "")
+			{	alert("Nome Obrigatório");
+				document.meuform.nome.focus();
+				return false; }
+		<!-- verificando e-mail -->	
+		<!-- testando caixa de texto email -->
+		if(document.meuform.email.value == "")
+			{	alert("E-mail Obrigatório");
+				document.email.nome.focus();
+				return false; }		
+	
+		<!-- testando caixa de texto  endereco-->
+		if(document.meuform.endereco.value == "")
+			{	alert("Endereço Obrigatório");
+				document.meuform.endereco.focus();
+				return false; }
+		<!-- testando Cidade -->
+		 if(document.meuform.cidade.value == "")
+			{	alert("Cidade  Obrigatória");
+				document.meuform.cidade.focus();
+				return false; }
+			
+			
+				
+				<!-- testando DDD -->
+		 if(document.meuform.ddd.value == "")
+			{	alert("DDD Obrigatório");
+				document.meuform.ddd.focus();
+				return false; }	
+		 <!-- testando Telefone -->
+		 if(document.meuform.telefone.value == "")
+			{	alert("Telefone Obrigatório");
+				document.meuform.telefone.focus();
+				return false; }	
+		<!-- testando usuario -->
+		 if(document.meuform.usuario.value == "")
+			{	alert("Usuário Obrigatório");
+				document.meuform.usuario.focus();
+				return false; }
+		
+		<!-- testando Senha -->
+		 if(document.meuform.senha.value == "")
+			{	alert("Senha Obrigatória");
+				document.meuform.senha.focus();
+				return false; }
+		 <!-- testando Se e-mail está correto-->
+			var email = document.meuform.email.value;
+		if (email.indexOf('@') == -1 ||
+			email.indexOf('.') == -1 )
+			{	alert("E-mail Inválido !!");
+				return false;}
+		<!-- Retorna verdadeiro caso todos os testes sejam satisfatórios -->								
+		return	true;
+		
+	}
+	function SomenteNumero(e){
+    var tecla=(window.event)?event.keyCode:e.which;   
+    if((tecla>47 && tecla<58)) return true;
+    else{
+    	if (tecla==8 || tecla==0) return true;
+	else  return false;
+    }
+}
+</script>
+<body>
+<h2> Formulário para cadastro </h2>
+<form name="meuform" method="get" onSubmit="return confirma();return validarCampo();">
+<fieldset><legend>Detalhes Pessoais</legend>
+Nome: 
+<input type="text" name="nome"> <br>
+E-mail: 
+
+<input type="text" name="email"> <br>
+Endereço: 
+<input type="text" name="endereco"> <br>
+Cidade: 
+<input type="text" name="cidade"> <br>
+Telefone: 
+<input type="text" name="ddd" maxlength="3" size ="3" value="" onkeypress="return SomenteNumero(event)"> 
+<input type="text" maxlength="8" size ="8" name="telefone" value="" onkeypress="return SomenteNumero(event)">
+Usuário:
+<input type="text" name="usuario" placeholder="Entre com o seu login">  <br>
+Senha:
+<input type="password" name="senha">  <br>
+
+ 
+<input type="reset" value="Limpar">
+<input type="submit" value="Finaliza minha Inscrição">
+</form>
+</body>
+</html>
+
+
+
+
+
+

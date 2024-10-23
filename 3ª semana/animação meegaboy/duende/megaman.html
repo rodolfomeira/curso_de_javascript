@@ -1,0 +1,41 @@
+<html>
+<head>
+<title> Aula de JavaScript </title>
+<script type="text/javascript" src="core.js"></script>
+<style type="text/css">
+#duende { 
+	height:133px; 
+	width: 100px; 
+	background-image: url(duendeok.png);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+</style>
+<script type="text/javascript">
+var duende = {
+	init: function()
+	{
+		duende.div = document.getElementById("duende");
+		duende.frameWidth = 100;
+		duende.frames = 6;
+		duende.offsetX = 0;
+
+		duende.animar();
+	},	
+	animar: function(){
+		duende.offsetX -= duende.frameWidth;
+		
+		if (duende.offsetX <= -duende.frameWidth * duende.frames){
+			duende.offsetX = 0;
+		}
+	duende.div.style.backgroundPosition =  duende.offsetX + " 0px";
+	setTimeout(duende.animar, 375);
+	}
+};
+Core.start(duende);
+</script>
+</head>
+<body>
+<div id="duende"></div>
+</body>
+</html>

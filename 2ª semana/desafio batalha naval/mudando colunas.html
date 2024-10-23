@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8"/>
+<title>Rollover com Imagem</title>
+</head>
+<body>
+<table>
+<tr>
+    <td>um</td>
+    <td>dois</td>
+    <td>três</td>
+    <td>quatro</td>
+    <td>cinco</td>
+</tr>
+</table>
+
+<script>
+    $(function () {
+        $("table td:nth-child(5)").text("aaa");
+    });
+</script>
+
+----------------------
+
+<table>
+<tr>
+    <td>um</td>
+    <td>dois</td>
+    <td>três</td>
+    <td>quatro</td>
+    <td class="quinto-td">cinco</td>
+</tr>
+</table>
+
+<script>
+    $(function () {
+        $(".quinto-td").text("aaa");
+    });
+</script>
+----------------------
+<table>
+<tr>
+    <td>um</td>
+    <td>dois</td>
+    <td>três</td>
+    <td>quatro</td>
+    <td>cinco</td>
+</tr>
+</table>
+</body>
+</html>
+<script>
+     document.querySelectorAll("table td:nth-child(5)")[0].innerText = "huuhhu"
+</script>

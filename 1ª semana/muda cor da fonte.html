@@ -1,0 +1,63 @@
+<html>
+<head>
+<script type="text/javascript">
+  
+ function teste(){
+ 
+ var time = formulario.time.value;
+
+ document.write("<p style='color:red;'>"+ time +"</p>");
+
+}
+</script>
+
+</head>
+<body>
+<form id="formulario">
+
+ <input type="text" name="time" />
+ <input type="button" value="testar" onclick="teste();" />
+
+</form>
+</body>
+</html>
+
+<------------------ou assim------------------>
+
+<html>
+<head>
+<script type="text/javascript">
+  
+ function vermelho(){
+ 
+ document.getElementById("paragrafo").style.color="red";
+
+ }
+
+ function azul(){
+ 
+ document.getElementById("paragrafo").style.color="blue";
+
+ }
+
+</script>
+
+</head>
+<body>
+
+<p id="paragrafo"> 
+
+A interface do Google Docs é simples e intuitiva, com a maioria das opções que 
+
+encontramos
+
+</p>
+
+<br />
+
+<input type="button" onclick="vermelho();" value="vermelho" />
+
+<input type="button" onclick="azul();" value="azul" />
+
+</body>
+</html>

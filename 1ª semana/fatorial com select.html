@@ -1,0 +1,63 @@
+<html>
+<head><title>Cálculos entre objeto de Texto</title> </head>
+
+<script language="Javascript"> function operacao(){
+
+var a=eval(document.formcalc.t1.value); 
+var i = 1,
+    fat = 1,
+    n = a;
+	document.write("<h2> Fatorial </h2>");
+    document.write("<h3>"+n+"!=");
+    while( i <= n ){
+        var fat = fat * i;
+		    if (i!=n)
+		      document.write(i+"x");
+			 else
+			  document.write(i+"=");
+            i += 1;
+		
+		
+    }
+	 document.write(fat+"</h3");
+     document.write('<br> <br> <br> <a href="fatorial com select.html"/>Executar novamente</a> ' );
+
+
+
+
+
+
+
+
+
+}
+</script> 
+
+
+<body>
+
+<form name="formcalc"> 
+
+<h3><center>Cálculo emJavaScript</h3>
+
+<select name="t1" id="t1">
+ 
+  <option value="2">Dois</option>
+ 
+  <option value="6">Seis</option>
+ 
+  <option value="8">Oito</option>
+ 
+  <option value="10">Dez</option>
+
+</select>
+<hr><br><br>
+
+<input type="button" name="bt1" value="Calcular" onclick="operacao()"> &nbsp&nbsp
+<input type="reset" name="bt2" value="Cancelar" onclick="document.formcalc.t1.focus()">
+&nbsp&nbsp
+
+<input type="button" name="bt3" value="Fechar" onclick="window.close()"></center> 
+</form>
+</body>
+</html>

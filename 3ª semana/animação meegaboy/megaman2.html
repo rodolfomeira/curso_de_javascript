@@ -1,0 +1,41 @@
+<html>
+<head>
+<title> Aula de JavaScript </title>
+<script type="text/javascript" src="core.js"></script>
+<style type="text/css">
+#megaboy { 
+	height: 150px; 
+	width: 150px; 
+	background-image: url(boy.png);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+</style>
+<script type="text/javascript">
+var megaboy = {
+	init: function()
+	{
+		megaboy.div = document.getElementById("megaboy");
+		megaboy.frameWidth = 150;
+		megaboy.frames = 6;
+		megaboy.offsetX = 0;
+
+		megaboy.animar();
+	},	
+	animar: function(){
+		megaboy.offsetX -= megaboy.frameWidth;
+		
+		if (megaboy.offsetX <= -megaboy.frameWidth * megaboy.frames){
+			megaboy.offsetX = 0;
+		}
+	megaboy.div.style.backgroundPosition =  megaboy.offsetX + " 0px";
+	setTimeout(megaboy.animar, 475);
+	}
+};
+Core.start(megaboy);
+</script>
+</head>
+<body>
+<div id="megaboy"></div>
+</body>
+</html>

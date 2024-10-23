@@ -1,0 +1,138 @@
+﻿
+<html>
+<head>
+<title> Aula de JavaScript </title>
+<script type="text/javascript" src="core.js"></script>
+<STYLE>
+  IMG {cursor: hand; width: 40px; height: 40px}
+</STYLE>
+<SCRIPT LANGUAGE="JavaScript">
+<!-- 
+   function red(){
+ 
+ document.getElementById("paragrafo").style.color="red";
+
+ }
+
+ function blue(){
+ 
+ document.getElementById("paragrafo").style.color="blue";
+
+ }
+  function green(){
+ 
+ document.getElementById("paragrafo").style.color="green";
+
+ }
+ function arial(){
+ 
+  
+
+ document.getElementById('paragrafo').style.fontFamily='arial black';
+
+}
+ function tahoma(){
+ 
+
+ document.getElementById('paragrafo').style.fontFamily='tahoma';
+
+}
+
+ //-->
+</SCRIPT> 
+<script type="text/javascript" src="core.js"></script>
+
+<style type="text/css">
+#megaboy { 
+	height: 151px; 
+	width: 137px; 
+	background-image: url(megaboy.png);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+</style>
+<script type="text/javascript">
+var megaboy = {
+	init: function()
+	{
+		megaboy.div = document.getElementById("megaboy");
+		megaboy.frameWidth = 137;
+		megaboy.frames = 6;
+		megaboy.offsetX = 0;
+
+		megaboy.animar();
+	},	
+	animar: function(){
+		megaboy.offsetX -= megaboy.frameWidth;
+		
+		if (megaboy.offsetX <= -megaboy.frameWidth * megaboy.frames){
+			megaboy.offsetX = 0;
+		}
+	megaboy.div.style.backgroundPosition =  megaboy.offsetX + " 0px";
+	setTimeout(megaboy.animar, 75);
+	}
+};
+Core.start(megaboy);
+</script>
+</head>
+<body>
+
+ <center>
+<p id="paragrafo"> 
+
+  Previsão do Horóscopo (Clique no signo para ver a previsão !!!) 
+
+
+</p> </center>
+
+ <hr>
+ <center>
+ <form id="formulario">
+
+ 
+ <input type="button" value="Texto vermelho" onclick="red();" />
+ <input type="button" value="Texto Azul" onclick="blue();" />
+ <input type="button" value="Texto Verde" onclick="green();" />  
+ <input type="button" value="Fonte Arial Black " onclick="arial();" />
+ <input type="button" value="Fonte Tahoma" onclick="tahoma();" />
+
+</form>
+</center>
+<hr>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>  
+<div id="megaboy"></div>
+<hr>
+<center>
+<IMG SRC="aquario.png" onMouseOver="Crescer(this)" onMouseOut="Normal(this)" onMouseup=" alert('A Lua continua seu ciclo e entra na fase Crescente em Libra, se une a Júpiter e recebe um tenso aspecto de Plutão indicando dias de mudanças importantes em projetos que envolvam viagens e contatos com pessoas e empresas estrangeiras. Uma viagem pode ser adiada ou alguns problemas burocráticos podem surgir.')">
+<IMG SRC="aries.png" onMouseOver="Crescer(this)" onMouseOut="Normal(this)" onMouseup=" alert('A Lua continua seu ciclo e entra na fase Crescente em Libra, se une a Júpiter e recebe um tenso aspecto de Plutão indicando dias de enfrentamento de dificuldades em seus relacionamentos, pessoais e profissionais. Um namoro ou romance pode passar por problemas ou uma sociedade ou parceria começar a mostrar dificuldades.')">
+<IMG SRC="cancer.png" onMouseOver="Crescer(this)" onMouseOut="Normal(this)"  onMouseup=" alert('A Lua continua seu ciclo e entra na fase Crescente em Libra, se une a Júpiter e recebe um tenso aspecto de Plutão indicando problemas e dificuldades em sua vida doméstica ou em um relacionamento familiar. Os dias seguem mais tensos e suas emoções passam por um momento de desequilíbrio. Procure distanciar-se da vida social.')">
+<IMG SRC="capricornio.png" onMouseOver="Crescer(this)" onMouseOut="Normal(this)" onMouseup=" alert('A Lua continua seu ciclo e entra na fase Crescente em Libra, se une a Júpiter e recebe um tenso aspecto de Plutão indicando dias de mudanças importantes em seus projetos profissionais e planos de carreira. O período, que dura alguns dias, pode trazer novas possibilidades e novas escolhas em sua carreira.')">
+<IMG SRC="escorpiao.png" onMouseOver="Crescer(this)" onMouseOut="Normal(this)"onMouseup=" alert('A Lua continua seu ciclo e entra na fase Crescente em Libra, se une a Júpiter e recebe um tenso aspecto de Plutão indicando dias de interiorização e necessidade de mudanças em seu mundo emocional e sentimentos. O momento pode envolver certo desequilíbrio emocional. Medite e pratique yoga.')">
+<IMG SRC="gemeos.png" onMouseOver="Crescer(this)" onMouseOut="Normal(this)" onMouseup=" alert('A Lua continua seu ciclo e entra na fase Crescente em Libra, se une a Júpiter e recebe um tenso aspecto de Plutão indicando dias de dificuldades emocionais, que podem refletir em um romance ou namoro. Procure manter a calma e mude o que for necessário. O relacionamento com um filho passa pelas mesmas dificuldades.')">
+<IMG SRC="leao.png" onMouseOver="Crescer(this)" onMouseOut="Normal(this)" onMouseup="alert('A Lua continua seu ciclo e entra na fase Crescente em Libra, se une a Júpiter e recebe um tenso aspecto de Plutão indicando um dia de comunicação difícil e nervos à flor da pele. Se estiver envolvido em uma negociação ou acordo, ou mesmo na negociação de um novo contrato, não assine nada nos próximos dias.')">
+<IMG SRC="libra.png" onMouseOver="Crescer(this)" onMouseOut="Normal(this)" onMouseup="alert('A Lua em seu signo, recebe um ótimo aspecto de Plutão e Vênus indicando um dia de mudanças e transformações positivas em sua vida emocional, pessoal e profissional. É possível que você consiga enfrentar uma dificuldade sob um outro prisma. Você estará mais aberto e receptivo, equilibrado e consciente.')">
+<IMG SRC="peixes.png" onMouseOver="Crescer(this)" onMouseOut="Normal(this)" onMouseup="alert('A Lua continua seu ciclo e entra na fase Crescente em seu signo, se une a Júpiter e recebe um tenso aspecto de Plutão indicando dias de pressão e necessidade de mudanças em seu mundo emocional e sentimentos. O período, que dura apenas alguns dias, pode trazer mudanças significativas na vida pessoal e profissional.')">
+<IMG SRC="sagitario.png" onMouseOver="Crescer(this)" onMouseOut="Normal(this)" onMouseup="alert('A Lua continua seu ciclo e entra na fase Crescente em Libra, se une a Júpiter e recebe um tenso aspecto de Plutão indicando dias de distanciamento da vida social. Você sentirá forte necessidade de retomar o equilíbrio entre a vida pessoal e a social. Um amigo pode estar passando por apuros e precisar de sua ajuda.')">
+<IMG SRC="touro.png" onMouseOver="Crescer(this)" onMouseOut="Normal(this)" onMouseup="alert('A Lua continua seu ciclo e entra na fase Crescente em Libra, se une a Júpiter e recebe um tenso aspecto de Plutão indicando dias de pressão e dificuldades, especialmente no trabalho, que passa por um momento de tensão. Procure organizar seus dias para não perder-se. Procure cuidar de sua saúde, física e mental.')">
+<IMG SRC="virgem.png" onMouseOver="Crescer(this)" onMouseOut="Normal(this)" onMouseup="alert('A Lua em seu signo, recebe um ótimo aspecto de Plutão e Vênus indicando um dia de mudanças e transformações positivas em sua vida emocional, pessoal e profissional. É possível que você consiga enfrentar uma dificuldade sob um outro prisma. Você estará mais aberto e receptivo, equilibrado e consciente.')">
+
+ 
+ </center>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+   function Crescer(Figura){
+     Figura.style.width = "60px";
+     Figura.style.height = "60px";
+   }
+   function Normal(Figura){
+     Figura.style.width = "40px";
+     Figura.style.height = "40px";
+   }
+   
+   
+ 
+
+//-->
+</SCRIPT> 
+</body>
+</html>

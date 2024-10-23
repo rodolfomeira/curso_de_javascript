@@ -1,0 +1,22 @@
+<html>
+<title> Trabalhando com Formulários </title>
+<script language="javascript">
+	function confirma(){
+	if(document.meuform.trabalha[0].checked==false &&
+	   document.meuform.trabalha[1].checked==false )
+		alert("Opção Obrigatória");
+	}
+</script>
+<body>
+<h2> Formulário para cadastro </h2>
+<form name="meuform" onSubmit="return confirma()">
+	Escola a opção:<br> 
+	<input type="radio" name="trabalha" value="Sim"> Sim, Trabalho<br>
+	<input type="radio" name="trabalha" value="Não"> Não, trabalho<br>
+	<input type="submit" value="enviar">
+</form>
+</body>
+</html>
+
+
+

@@ -1,0 +1,62 @@
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+<!-- BANNERS IMAGENS, ENFIM O QUE QUISER -->
+<div id='central'>
+     <ul class="left">
+	  <li><img src="GSO I.jpg"></li>
+	  <li><img src="imc.jpg"></li>
+	  <li><img src="LP I.jpg"></li>
+	  <li><img src="pwI.png"></li>
+	  <li><img src="tlbd I.jpg"></li>
+	  <li><img src="TPI web2.jpg"></li>
+	 
+     </ul>
+</div>
+<!-- NAVEGAÇÃO -->
+     <input type="button" value="direita" id="direita"/>
+     <input type="button" value="esquerda" id="esquerda"/>
+<style type="text/css">
+     *{
+     	padding:0;
+	margin:0;
+     }
+     ul{
+          list-style:none;
+     }
+     .left{
+          width:5000px;
+          float:left;
+          display:block;
+     }
+     .left li{
+          height:50px;
+          border:1px solid black;
+	  float:left;
+	  margin-right:5px;
+     }
+     #central{
+          display:block;
+          width:305px;
+          height:280px;
+	  overflow:hidden;
+     }
+</style>
+<script type="text/javascript">
+     $(document).ready(function(){
+        $('#direita').click(function(){
+		if($('.left').css('margin-left') != '-608px'){
+			$('.left').animate({"margin-left": "-=334px"}, "slow");
+		}else{
+			$('.left').animate({"margin-left": "+=608px"}, "slow");		
+		}
+	});  
+        $('#esquerda').click(function(){
+		if($('.left').css('margin-left') != '0px'){
+			$('.left').animate({"margin-left": "+=334px"}, "slow");
+		}else{
+			$('.left').animate({"margin-left": "-=608px"}, "slow");		
+		}
+	});  
+     });
+</script>
+
+

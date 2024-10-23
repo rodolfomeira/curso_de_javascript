@@ -1,0 +1,26 @@
+<html>
+<title> Trabalhando com Formulários </title>
+<script language="javascript">
+	function confirma(){
+		if(document.meuform.cidade.selectedIndex==0)
+		alert("Indique uma unidade");
+	}
+</script>
+<body>
+<h2> Formulário para cadastro </h2>
+<form name="meuform" onSubmit="return confirma()">
+	Unidade de Trabalho:<br> 
+	<select name="cidade">
+		<option selected> - - - cidade - - -	</option>
+		<option> Campinas			</option>
+		<option> São Paulo			</option>
+		<option> Rio e Janeiro      </option>
+	</select>
+	<br>
+	<input type="submit" value="enviar">
+</form>
+</body>
+</html>
+
+
+

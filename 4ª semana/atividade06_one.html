@@ -1,0 +1,71 @@
+﻿<html>
+<title> Trabalhando com Formulários </title>
+<script language="javascript">
+	function confirma(){
+		<!-- testando caixa de texto nome -->
+		if(document.meuform.nome.value == "")
+			{	alert("Nome Obrigatório");
+				document.meuform.nome.focus();
+				return false; }
+		<!-- testando caixa de texto  sobrenome-->
+		if(document.meuform.sobrenome.value == "")
+			{	alert("Sobrenome Obrigatório");
+				document.meuform.sobrenome.focus();
+				return false; }
+		<!-- testando Data de Nascimento -->
+		 if(document.meuform.nascimento.value == "")
+			{	alert("Data de Nascimento  Obrigatória");
+				document.meuform.nascimento.focus();
+				return false; }
+				<!-- testando opção select  depto-->				
+		if(document.meuform.depto.selectedIndex==0)
+			{ 	alert("Selecione um Departamento");				
+				return false; }
+					
+		 <!-- testando caixa de texto código -->
+		if(document.meuform.codigo.value == "")
+			{	alert("Cód. do Funcionário Obrigatório");
+				document.meuform.codigo.focus();
+				return false; }
+		
+		
+	}
+</script>
+<body>
+<h2> Formulário para cadastro </h2>
+<form name="meuform" method="get" onSubmit="return confirma()">
+<fieldset><legend>Detalhes Pessoais</legend>
+Nome: 
+<input type="text" name="nome"> <br>
+Sobrenome: 
+
+<input type="text" name="sobrenome"> <br>
+Data de Nascimento: 
+<input type="date" name="nascimento"> <br>
+
+</fieldset>
+<fieldset><legend>Detalhes Profissionais</legend>
+<br>Departamento :<br> 
+ <select name="depto">
+	<option> Não Selecionado
+	
+	<option> T.I.
+	<option> R.H
+	<option> Secretaria
+	<option> Estoque
+	
+</select><br>
+  <br>Código do Funcionário :<br> 
+  <input type="text" name="codigo"> <br>
+</fieldset>
+<input type="reset" value="Limpar">
+<input type="submit" value="Incluir um Funcionário">
+</form>
+</body>
+</html>
+
+
+
+
+
+

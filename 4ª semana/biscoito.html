@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>  
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">  
+        <title>Sorteio de Frases</title>
+    </head>
+
+   <BODY>
+     <script>
+     /*
+        O computador vai fazer um sorteio e guardar números no 
+        aleatorio1 e  aleatorio2 números de 0 até 10
+     
+     
+     */
+         //Math.floor transforma o que foi sorteado num número inteiro( número se casas decimais)
+         // sorteia 11 números de 0 até 10 , por que começa no zero e vai até 10
+         
+         var n1= Math.floor(Math.random() * 6); //sorteia número de 0 até 6, aqui dá um total de 7 números
+         if(n1==0) alert("As pessoas costumam dizer que a motivação não dura para sempre.\nBem, nem o efeito do banho, por isso recomenda-se diaramente");
+         else if(n1==1) alert("Saber encontrar a alegria na alegria dos outros, é o segredo da felicidade");
+         else if(n1==2) alert("A alegria de fazer o bem é a unica felicidade verdadeira");
+         else if(n1==3) alert("Aquele que nunca viu a tristeza , nunca reconhecerá a alegria");
+         else if(n1==4) alert("Eu faço da dificuldade a minha motivação.\n A volta por cima vem na continuação");
+         else if(n1==5) alert("Quando você está positivo o universo conspira a seu favor,\nmas quando está negativo ele conspira contra você, \nentão nunca se permitar estar negativo!!!");
+         else alert("O trabalho só nos cansa se não nos dedicarmos a ele com alegria.");
+                          
+     
+                          
+         
+        
+         
+          
+     </script>
+       <font face="arial" color="blue">
+         <marquee behavior="alternate"> Faça o sorteio de uma frase para o seu dia </marquee>
+       </font>
+       <font color ="green" face ="algerian">
+         <center><h3> Aperte F5 para sortear uma nova frase </h3></center>
+       </font>
+          
+     <P>
+   </BODY>
+</HTML>

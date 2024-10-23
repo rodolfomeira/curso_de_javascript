@@ -1,0 +1,39 @@
+<html>
+<title> Trabalhando com Formulários </title>
+<script language="javascript">
+	function confirma(){
+		if( document.meuform.nome.value == "")
+			{	document.meuform.nome.style.backgroundColor='FFFFCC'
+
+				return false }
+				
+		if(	document.meuform.fone.value == "")
+			{	document.meuform.fone.style.backgroundColor='FFFFCC'
+				return false }	
+					
+		if( document.meuform.email.value == "" )
+			{	document.meuform.email.style.backgroundColor='FFFFCC'
+				return false }				
+				
+		return true
+	}
+</script>
+<body>
+<h2> Formulário para cadastro </h2>
+<form name="meuform" onSubmit="return confirma()">
+	Nome completo: <br>
+	<input type="text" name="nome"> <br>
+	Telefone+ddd: <br>
+	<input type="text" name="fone"> <br>
+	e-mail: <br>
+	<input type="text" name="email"> <br><br>
+	<input type="reset" value="limpar">
+	<input type="submit" value="enviar">
+</form>
+</body>
+</html>
+
+
+
+
+

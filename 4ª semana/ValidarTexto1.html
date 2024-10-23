@@ -1,0 +1,28 @@
+<html>
+<title> Trabalhando com Formulários </title>
+<script language="javascript">
+	function confirma(){
+		if( document.meuform.pri_nome.value == "" ||
+			document.meuform.fone.value == "" ||
+			document.meuform.email.value == "" )
+			{
+				alert("Campos Obrigatório")
+				return false }
+		else
+			return	true						
+	}
+</script>
+<body>
+<h2> Formulário para cadastro </h2>
+<form name="meuform" onSubmit="return confirma()">
+	Nome completo: <br>
+	<input type="text" name="pri_nome"> <br>
+	Telefone+ddd: <br>
+	<input type="text" name="fone"> <br>
+	e-mail: <br>
+	<input type="text" name="email"> <br>
+	<input type="reset" value="limpar">
+	<input type="submit" value="enviar">
+</form>
+</body>
+</html>
